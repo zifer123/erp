@@ -16,12 +16,17 @@ import teshuchukuList from '@/page/cangkuchuku/teshuchukuList.vue'
 import cangkuguanli from '@/page/cangkuguanli/cangkuguanli.vue'
 import pandian from '@/page/cangkuguanli/pandian.vue'
 import pandianList from '@/page/cangkuguanli/pandianList.vue'
+import empty from '@/page/empty/empty.vue'
 
 
 
 Vue.use(Router)
 
 const routes = [
+  {
+    path: '/empty',
+    component: empty
+  },
   {
     path: '/',
     redirect: '/index'
