@@ -12,8 +12,17 @@
       }
     },
     created() {
-        console.log(111111);
       this.num = new Date().getTime();
+    },
+    beforeRouteEnter(to,from,next) {
+      /* 用到路由钩子，判断是否是刷新页面 */
+      if(from.path == '/empty') {
+        next(function(vm) {
+          vm.num = '';
+        });
+      }else{
+          next();
+      }
     }
   }
 </script>
